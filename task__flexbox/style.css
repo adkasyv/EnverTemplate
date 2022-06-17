@@ -1,0 +1,53 @@
+/* Чтобы строка не выходила за границы: option + z (mac), alt + z (windows)   */
+
+/* 1) Расположить элементы по Горизонтали */
+
+/* 2) Наши квадратики сузились в ширине ибо не вмещаются в контейнер, сделайте так, чтобы они не теряли ширину, а лишние квадраты уходили на следующую строку */
+
+/* 3) Используя свойство order поставьте блок с классом .active на 1 место */
+
+/* 4) Расположить элементы равномерно по горизонтали, 
+(Первый элемент прижимамется в левый край, последний в правый) */
+
+/* Закаментируйте первый container в html и раскаментируйте второй. Сделать равномерный отступ между каждым элементом (Все элементы должны иметь равное пространство вокруг) */
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+}
+
+.child {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  background: green;
+  
+}
+.child p {
+  margin: 0 auto;
+}
+
+.active {
+  order: -1;
+
+}
+
+.container {
+  background: #ffa628;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.parent-second {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
+}
